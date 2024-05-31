@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Web Development Portfolio.css">
+    <title>Thabiso Xakata</title>
+</head>
+<body>
+    <!--Header logo-->
+    <header class="header">
+      <a href="Index-Web-Development-Portfolio.html" class="logo">Thab<span style="color: rgb(255, 120, 57);">iso.</span></a>
+      <!--Navigation Bar-->
+      <nav class="navbar">
+        <a href="Index-Web-Development-Portfolio.html" class="active">Home</a>
+        <a href="About me.html">About me</a>
+        <a href="Skills&Portfolio.html">Skills & Portfolio</a>
+      </nav>
+    </header>
+    <!--Home Page Content-->
+<!--Contact Form-->
+<section class="form">
+    <div class="contactform">
+         <fieldset>
+            <legend><h1 style="color:rgb(255, 120, 57);">Contact me</h1></legend><br><br>
+                <form action="submit_form.php" method="post">
+                    <label for="name"><span>Your name:</span></label>
+                    <input type="text" id="name" name="name" required><br><br>
+                    <label for="Surname"><span>Your surname:</span></label>
+                    <input type="text" id="surname" name="surname" required><br><br>
+                    <label for="email"><span>Email:</span></label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="phone"><span>Phone no.</span></label>
+                    <input type="number" id="phone" required><br><br>        
+                    <label for="message"><span>Message:</span></label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                    <button style="padding: 20px;">Send</button>
+                </form><br><br>
+        <div class="checks">
+            <label for="copy_email">Send copy to your email</label>
+            <input type="checkbox" id="copy_email" name="Email copy">        
+        </div>
+    </fieldset>
+    </div>
+</section>
+
+<section class="wrapper">
+    <div class="container">
+        <div class="star-widget">
+            <input type="radio" name="rate" id="rate-5">
+            <label for="rate-5" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-4">
+            <label for="rate-4" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-3">
+            <label for="rate-3" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-2">
+            <label for="rate-2" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-1">
+            <label for="rate-1" class="fas fa-star"></label>
+        </div>
+    </div>
+</section>
+
+<section class="Contact-information">
+    <div class="social-media">
+        <a href="https://www.facebook.com/MacCheez"><img src="Facebook logo.png" alt="Facebook" width="5%" height="5%"></a>
+        <a href="https://www.instagram.com/tasslifestylemusic/?hl=en"><img src="png-transparent-instagram-social-media-instagram-black-social-social-media-logo-icon-thumbnail.png" alt="Instagram" width="5%" height="5%"  style="background-color: transparent; opacity: 70%; border-radius: 2.5rem;"></a>
+        <a href="https://github.com/ThabisoXakata"><img src="Github logo.png" alt="Git Hub" width="5%" height="5%"></a>
+        <a href="www.linkedin.com/in/thabiso-xakata-623510229"><img src="kisspng-computer-icons-linkedin-5aff0283a31f04.0344839015266617636682.jpg" alt="LinkedIn" width="5%" height="5%" style="background-color: transparent; opacity: 70%; border-radius: 2.5rem;"></a>
+    </div>
+</section>        
+    <!--Copyright-->
+    <section>
+        <footer>
+            <p>&copy; 2024 Thabiso Xakata. All rights reserved.</p>
+        </footer>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stars = document.querySelectorAll('.star-widget input');
+            stars.forEach(star => {
+                star.addEventListener('change', function () {
+                    updateStars(star);
+                });
+            });
+        });
+        
+        function updateStars(star) {
+            const stars = document.querySelectorAll('.star-widget input');
+            stars.forEach(s => {
+                const label = s.nextElementSibling;
+                if (s.checked || s === star) {
+                    label.classList.add('checked');
+                } else {
+                    label.classList.remove('checked');
+                }
+            });
+        }
+    </script>
+      
+</body>
+</html>
